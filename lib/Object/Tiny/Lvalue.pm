@@ -1,25 +1,22 @@
+use 5.006;
+use strict;
+use warnings;
+
 package Object::Tiny::Lvalue;
 
 # ABSTRACT: minimal class builder with lvalue accessors
 
-use strict 'vars';
-
-BEGIN {
-	require 5.003_96;
-}
-
 sub import {
 	return unless shift eq __PACKAGE__;
 	my $pkg = caller;
-	my $child = 0+@{"${pkg}::ISA"};
-	eval join "\n",
+	eval join "\n", (
 		"package $pkg;",
-		($child ? () : "\@${pkg}::ISA = 'Object::Tiny::Lvalue';"),
+		'our @ISA = "Object::Tiny::Lvalue" unless @ISA;',
 		map {
-			defined and ! ref and /^[^\W\d]\w*$/s
-				or die "Invalid accessor name '$_'";
-			"sub $_ : lvalue { \$_[0]->{$_} }"
-		} @_;
+			defined and /\A[^\W\d]\w*\z/ or die "Invalid accessor name '$_'";
+			"sub $_ : lvalue { \$_[0]->{$_} }";
+		} @_
+	);
 	die "Failed to generate $pkg" if $@;
 	return 1;
 }
