@@ -1,4 +1,8 @@
-Revision history for Perl extension Object-Tiny
+Release history for Object-Tiny-Lvalue
+
+1.082 Sat 10 Jan 2015
+	- No functional changes
+	- No longer contains INSTALL file with install-as-root instructions
 
 1.081 Sat 03 Jan 2015
 	- No functional changes

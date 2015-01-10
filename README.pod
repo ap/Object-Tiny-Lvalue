@@ -1,0 +1,43 @@
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+Object::Tiny::Lvalue - minimal class builder with lvalue accessors
+
+=head1 VERSION
+
+version 1.082
+
+=head1 SYNOPSIS
+
+Define a class:
+
+  package Foo;
+  use Object::Tiny::Lvalue qw( bar baz );
+  1;
+
+Use the class:
+
+  my $object = Foo->new( bar => 1 );
+  printf "bar is %s\n", $object->bar;
+  $object->bar = 2;
+  printf "bar is now %s\n", $object->bar;
+
+=head1 DESCRIPTION
+
+This is a clone of L<Object::Tiny|Object::Tiny>, but adjusted to create accessors that return lvalues.
+
+=head1 AUTHOR
+
+Aristotle Pagaltzis <pagaltzis@gmx.de>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2015 by Aristotle Pagaltzis.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
