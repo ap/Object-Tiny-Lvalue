@@ -1,5 +1,9 @@
 Release history for Object-Tiny-Lvalue
 
+1.083 Thu 19 Mar 2015
+	- No functional changes
+	- Further test suite cleanup
+
 1.082 Sat 10 Jan 2015
 	- No functional changes
 	- No longer contains INSTALL file with install-as-root instructions
