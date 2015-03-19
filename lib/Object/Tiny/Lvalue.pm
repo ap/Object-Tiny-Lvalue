@@ -48,3 +48,5 @@ Use the class:
 =head1 DESCRIPTION
 
 This is a clone of L<Object::Tiny|Object::Tiny>, but adjusted to create accessors that return lvalues.
+
+You probably want to use L<Object::Properties|Object::Properties> instead.

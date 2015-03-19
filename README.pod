@@ -29,6 +29,8 @@ Use the class:
 
 This is a clone of L<Object::Tiny|Object::Tiny>, but adjusted to create accessors that return lvalues.
 
+You probably want to use L<Object::Properties|Object::Properties> instead.
+
 =head1 AUTHOR
 
 Aristotle Pagaltzis <pagaltzis@gmx.de>
