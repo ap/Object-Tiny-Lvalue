@@ -2,7 +2,7 @@ use 5.006; use strict; use warnings;
 
 package Object::Tiny::Lvalue;
 
-our $VERSION = '1.083';
+our $VERSION = '1.084';
 
 sub import {
 	return unless shift eq __PACKAGE__;
