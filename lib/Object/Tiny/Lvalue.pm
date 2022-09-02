@@ -1,10 +1,8 @@
-use 5.006;
-use strict;
-use warnings;
+use 5.006; use strict; use warnings;
 
 package Object::Tiny::Lvalue;
 
-# ABSTRACT: minimal class builder with lvalue accessors
+our $VERSION = '1.083';
 
 sub import {
 	return unless shift eq __PACKAGE__;
@@ -30,6 +28,14 @@ sub new {
 
 __END__
 
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+Object::Tiny::Lvalue - minimal class builder with lvalue accessors
+
 =head1 SYNOPSIS
 
 Define a class:
@@ -50,3 +56,5 @@ Use the class:
 This is a clone of L<Object::Tiny|Object::Tiny>, but adjusted to create accessors that return lvalues.
 
 You probably want to use L<Object::Properties|Object::Properties> instead.
+
+=cut
